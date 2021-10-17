@@ -1,0 +1,26 @@
+﻿<Properties StartupConfiguration="{D031C94B-6FA8-4463-946D-209E67206A08}|Default">
+  <MonoDevelop.Ide.ItemProperties.DietMobileApp.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget.117cf73997a168a136d48c156ea179e30ce2a9b5" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="DietMobileApp.iOS/Info.plist">
+    <Files>
+      <File FileName="DietMobileApp.iOS/Info.plist" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="DietMobileApp" expanded="True">
+            <Node name="DietMobileApp.iOS" expanded="True">
+              <Node name="Info.plist" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.DietMobileApp.Android FirstBuild="True" PreferredExecutionTarget="Android.pixel_2_marshmallow_6_0_-_api_23" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhone" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
