@@ -14,6 +14,8 @@ namespace DietMobileApp
             InitializeComponent();
 
             DependencyService.Register<MockDataStore>();
+
+            DependencyService.Register<FoodDataStore>();
             MainPage = new AppShell();
         }
 

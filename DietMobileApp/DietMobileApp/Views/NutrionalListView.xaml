@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="DietMobileApp.Views.NutrionalListView"
+    Title="{Binding Title}"
+    xmlns:local="clr-namespace:DietMobileApp.ViewModels"  
+    xmlns:model="clr-namespace:DietMobileApp.Models"  
+    x:Name="BrowseItemsPage">
+    <ContentPage.Content>
+       <RefreshView x:DataType="local:NutrionalListViewModel" Command="{Binding LoadItemsCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
+        <CollectionView x:Name="ItemsListView"
+                ItemsSource="{Binding Foods}"
+                SelectionMode="None">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout Padding="10" x:DataType="model:Food">
+                        <Label Text="{Binding Name}" 
+                            LineBreakMode="NoWrap" 
+                            Style="{DynamicResource ListItemTextStyle}" 
+                            FontSize="16" />
+                        <Label Text="{Binding Description}" 
+                            LineBreakMode="NoWrap"
+                            Style="{DynamicResource ListItemDetailTextStyle}"
+                            FontSize="13" />
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer 
+                                NumberOfTapsRequired="1"
+                                Command="{Binding Source={RelativeSource AncestorType={x:Type local:NutrionalListViewModel}}, Path=ItemTapped}"		
+                                CommandParameter="{Binding .}">
+                            </TapGestureRecognizer>
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </RefreshView>   
+    </ContentPage.Content>
+</ContentPage>
